@@ -7,7 +7,7 @@ import com.digitalcurrencyexperts.rocketwallet.R;
  * Created by santiagp on 6/07/2017.
  */
 
-public class Constants {
+public class Constants  {
 
 
     public static final String ADDRESSES = "addresses";
