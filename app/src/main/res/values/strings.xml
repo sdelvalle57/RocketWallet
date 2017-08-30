@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Rocket Wallet</string>
+    <string name="search">Search</string>
+    <string name="label_category_one_on"><u>TX In</u></string>
+    <string name="label_category_one_off">TX In</string>
+    <string name="label_category_two_off">TX Out</string>
+    <string name="label_category_two_on">TX Out</string>
+    <string name="press_again">Press back again to exit</string>
+    <string name="home">Home</string>
+    <string name="action_home_title"><b>Home</b></string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">Close drawer</string>
+    <string name="connection_failed">Connection Failed</string>
+    <string name="from">From:</string>
+    <string name="to">To</string>
+    <string name="semi_equal">≈</string>
+    <string name="max_spendable">Max Spendable</string>
+    <string name="send">Send</string>
+    <string name="btc">BTC</string>
+    <string name="aud">AUD</string>
+    <string name="total">Total: </string>
+    <string name="fee">Fee:</string>
+    <string name="close_session">Close Session</string>
+    <string name="syncing_with_blockchain">Syncing with the Blockchain: </string>
+    <string name="blockchain_sync_starting">Blockchain sync is starting</string>
+    <string name="copied_to_clipboard">Copied To Clipboard</string>
+    <string name="plus">+</string>
+    <string name="favorites">Favorites</string>
+    <string name="request_coins">Request Coins</string>
+    <string name="send_coins">Send Coins</string>
+    <string name="close">Close</string>
+    <string name="invalid_address">Invalid Address</string>
+    <string name="insuficient_money">Insufficient Money</string>
+    <string name="value_too_low">Exceeds Minimum Value</string>
+    <string name="hash">Hash:</string>
+    <string name="block_height">Block Height: </string>
+    <string name="block_depth">Block Depth: </string>
+    <string name="total_input">Total Input: </string>
+    <string name="total_output">Total Output: </string>
+    <string name="total_fee">Total Fee:</string>
+    <string name="estimated_change">Estimated Change</string>
+    <string name="estimated_change_address">Estimated Change Address</string>
+    <string name="watch_transaction_on_blocktrail">Watch Transaction On Blocktrail</string>
+    <string name="tx">Tx</string>
+    <string name="request_amount">Request Amount</string>
+    <string name="not_yet_available">Not yet available</string>
+    <string name="input">Input</string>
+    <string name="output">Output</string>
+    <string name="address">Address:</string>
+    <string name="value">Value:</string>
+    <string name="index">Index:</string>
+    <string name="spent_hash">Spent hash:</string>
+    <string name="spent_index">Spent index:</string>
+    <string name="output_hash">Output hash:</string>
+    <string name="output_index">Output index: </string>
+    <string name="blocks_left">Blocks left</string>
+    <string name="options">Options</string>
+    <string name="backup_wallet">Backup Wallet</string>
+    <string name="restore_wallet">Restore Wallet</string>
+    <string name="write_down_your_passphrase">Write down your passphrase</string>
+    <string name="restoring_wallet">Restoring Wallet</string>
+    <string name="is_coinbase">Is Coinbase: </string>
+    <string name="type">Type: </string>
+    <string name="is_utxo">Is UTXO: </string>
+
+    <string-array name="array_fees">
+        <item>Standard Fee</item>
+        <item>Low Priority Fee</item>
+        <item>Medium Priority Fee</item>
+    </string-array>
+
+</resources>

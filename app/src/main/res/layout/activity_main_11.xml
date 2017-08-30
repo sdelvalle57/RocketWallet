@@ -1,0 +1,312 @@
+<android.support.v4.widget.DrawerLayout android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvTransactionList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:divider="@color/txt_color"
+                    android:smoothScrollbar="true" />
+            </LinearLayout>
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/barlayout_gradient">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll|snap">
+
+                    <Button
+                        android:id="@+id/bt_nav_bar"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_width="@dimen/button_height"
+                        android:background="@drawable/button_nav_bar"
+                        android:layout_margin="@dimen/burguer_margin"
+                        android:contentDescription="@null"
+                        app:layout_collapseMode="pin"
+                        android:visibility="gone"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="28dp"
+                        android:layout_marginLeft="@dimen/margin_top"
+                        android:layout_marginRight="@dimen/margin_top"
+                        android:layout_marginTop="@dimen/margin_top"
+                        app:layout_collapseMode="parallax">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/view_pager"
+                            android:layout_width="@dimen/pro_img1"
+                            android:layout_height="@dimen/pro_img1"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true">
+                        </android.support.v4.view.ViewPager>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/margin_10dp"
+                            android:layout_toEndOf="@+id/ll_pager_indicator"
+                            android:layout_above="@+id/ll_pager_indicator"
+                            android:layout_alignParentTop="true">
+                            <TextView
+                                android:id="@+id/tv_balance_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:gravity="center"/>
+                            <TextView
+                                android:id="@+id/tvBalance"
+                                android:layout_below="@id/tv_balance_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"/>
+                            <TextView
+                                android:id="@+id/tvBalanceFiat"
+                                android:layout_below="@id/tvBalance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"/>
+
+                            <ImageView
+                                android:id="@+id/ivQRcode"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@id/tvBalanceFiat"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/vector_cam" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_pager_indicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/view_pager"
+                            android:layout_below="@id/view_pager"
+                            android:layout_marginBottom="@dimen/margin_10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_address_string"
+                            android:layout_below="@id/ll_pager_indicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="@dimen/margin_10dp">
+                            <TextView
+                                android:id="@+id/tvAddress"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+                            <ImageView
+                                android:id="@+id/ivCopyAdress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/vector_copy"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ll_address_string">
+                            <LinearLayout
+                                android:id="@+id/ll_syncing"
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+                                <TextView
+                                    android:id="@+id/tvSyncingMessage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/syncing_with_blockchain"/>
+                                <TextView
+                                    android:id="@+id/tvSyncing"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </android.support.design.widget.CollapsingToolbarLayout>
+            </android.support.design.widget.AppBarLayout>
+
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout
+            android:id="@+id/fabToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            app:containerId="@+id/fabtoolbar_container"
+            app:fabId="@+id/fab"
+            app:fabToolbarId="@+id/fabtoolbar_toolbar"
+            app:fadeInFraction="0.2"
+            app:hideDuration="250"
+            app:horizontalMargin="@dimen/margin_10dp"
+            app:color="@color/black_app"
+            app:showDuration="250"
+            app:verticalMargin="@dimen/margin_10dp">
+
+
+            <RelativeLayout
+                android:id="@id/fabtoolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="right">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/abc_ic_menu_selectall_mtrl_alpha"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:borderWidth="0dp"
+                    app:fabSize="normal" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@id/fabtoolbar_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/request"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:rotation="180"
+                        app:srcCompat="@drawable/vector_send" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/request_coins"
+                        android:textSize="@dimen/little_text12"
+                        android:textColor="@android:color/white"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/send"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/vector_send" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/send_coins"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/little_text12" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/options"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/vector_options" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/options"
+                        android:textSize="@dimen/little_text12"
+                        android:textColor="@android:color/white"
+                        android:gravity="center" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/close"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/vector_close" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/close"
+                        android:textSize="@dimen/little_text12"
+                        android:textColor="@android:color/white"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout>
+
+        <ImageView
+            android:id="@+id/expandedQR"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <!--TODO navDrawer disabled-->
+    <!--<fragment-->
+    <!--android:id="@+id/left_drawer"-->
+    <!--android:layout_width="@dimen/nav_drawer_width"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="start"-->
+    <!--class="com.zombytes.rocketwallet.fragments.MenuFragment"-->
+    <!--tools:layout="@layout/menu_user" />-->
+</android.support.v4.widget.DrawerLayout>

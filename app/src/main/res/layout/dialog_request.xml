@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/margin_10dp"
+    android:theme="@style/WhiteText">
+    <TextView
+        android:id="@+id/textview"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/request_amount"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_18sp"
+        android:layout_marginBottom="@dimen/margin_15dp"/>
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/textview"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+        <android.support.design.widget.TextInputLayout
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true"
+            android:textColorHint="@android:color/white"
+            android:background="@drawable/view_lines"
+            app:hintTextAppearance="@style/EditText.White.Floating">
+            <EditText
+                android:id="@+id/et_amount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:hint="@string/btc"
+                android:layout_gravity="center"
+                android:textSize="@dimen/txt_size"
+                android:textColor="@android:color/white"
+                android:inputType="number|numberDecimal"
+                android:background="@drawable/view_no_lines" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true"
+            android:textColorHint="@android:color/white"
+            android:background="@drawable/view_lines"
+            app:hintTextAppearance="@style/EditText.White.Floating">
+
+            <EditText
+                android:id="@+id/et_amount_fiat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/view_no_lines"
+                android:gravity="center"
+                android:hint="@string/aud"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt_size"
+                android:inputType="number|numberDecimal" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_qr"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/vector_cam"
+        android:layout_margin="@dimen/margin_15dp"
+        android:layout_below="@id/linear_layout"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_below="@id/iv_qr"
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/tv_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/vector_copy"
+            android:layout_marginEnd="@dimen/margin_15dp"/>
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/vector_share" />
+    </LinearLayout>
+
+</RelativeLayout>

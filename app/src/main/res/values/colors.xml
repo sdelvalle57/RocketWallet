@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#999999</color>
+    <color name="colorPrimaryDark">#2d2d2d</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="spinnerItem">#aeb0b3</color>
+    <color name="buttonText">#EEEEEE</color>
+    <color name="black_app">#2d2d2d</color>
+    <color name="txt_color">#7f7f7f</color>
+    <color name="editText">#d1d2d4</color>
+    <color name="color_category_0_pressed">#2d2d2d</color>
+    <color name="color_category_0">#3b82db</color>
+    <color name="color_category_1_pressed">#2d2d2d</color>
+    <color name="color_category_1">#17a5af</color>
+    <color name="menu_item_active_color">#414141</color>
+    <item name="gray_holo_dark" type="color">#ff464646</item>
+    <item name="bitcoin_color" type="color">#FF9900</item>
+    <color name="action_bar_color">#DDDDE0</color>
+
+</resources>

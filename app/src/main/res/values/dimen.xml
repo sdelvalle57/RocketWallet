@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="round_btn_ed">8dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="burguer_margin">6dp</dimen>
+    <dimen name="app_bar_padding">8dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="sub_sub_item_logo">14dp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="margin_top">18dp</dimen>
+    <dimen name="pager_item_size">18dp</dimen>
+    <dimen name="floating_button_margin">24dp</dimen>
+    <dimen name="icon_dimen">24dp</dimen>
+    <dimen name="menu_margin">32dp</dimen>
+    <dimen name="button_height">36dp</dimen>
+    <dimen name="menu_height">48dp</dimen>
+    <dimen name="icon_dimen_big">72dp</dimen>
+
+    <dimen name="pro_img1">170dp</dimen>
+    <dimen name="nav_drawer_width">256dp</dimen>
+    <dimen name="item_avatar_height">384dp</dimen>
+
+
+    <dimen name="little_text">10sp</dimen>
+    <dimen name="little_text12">12sp</dimen>
+    <dimen name="txt_size">14sp</dimen>
+    <dimen name="text_18sp">18sp</dimen>
+    <dimen name="text_24sp">24sp</dimen>
+    <dimen name="big_text">48sp</dimen>
+
+</resources>

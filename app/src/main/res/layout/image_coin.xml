@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.AppCompatImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/image_coin"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:padding="@dimen/margin_10dp"
+    app:srcCompat="@drawable/vector_share">
+
+</android.support.v7.widget.AppCompatImageView>
